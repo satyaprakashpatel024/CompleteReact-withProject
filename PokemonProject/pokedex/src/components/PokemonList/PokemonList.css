@@ -17,3 +17,10 @@
     padding: .5rem 1rem .5rem 1rem;
     margin-left: 1rem
 }
+
+.controls{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
