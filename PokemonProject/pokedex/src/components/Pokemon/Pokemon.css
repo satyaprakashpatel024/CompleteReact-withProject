@@ -6,11 +6,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 2px solid black;
+    margin-bottom: 5px;
 }
 .pokemon-name{
     font-size: larger;
     font-weight: bold;
     letter-spacing: 0.15rem;
+    text-align: center;
 }
 
 .pokemon-image{
