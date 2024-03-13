@@ -17,10 +17,13 @@ const PokemonList = () => {
 	})
 
 	async function downloadPokemon() {
-		setPokemonListState({...pokemonListState,isloading:true});
+		setPokemonListState((state)=>({
+			...state,
+			isloading:true
+		}));
 		// this downloads the first 20 pokemons
 		const response = await axios.get(pokemonListState.pokedexUrl);
-		console.log(response, "response");
+		// console.log(response, "response");
 		setPokemonListState((state)=>({
 			...state,
 			nextUrl:response.data.next,
@@ -49,7 +52,7 @@ const PokemonList = () => {
 			pokemonList:pokeListResult,
 			isloading:false
 		}));
-		console.log(pokemonListState,'result');
+		// console.log(pokemonListState,'result');
 	}
 	useEffect(() => {
 		downloadPokemon();
