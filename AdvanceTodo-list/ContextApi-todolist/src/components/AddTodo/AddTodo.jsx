@@ -5,8 +5,8 @@ const AddTodo = ({updateList}) => {
 	return (
 		<div>
 			<input 
-                value={inputText} 
                 type="text" 
+                value={inputText} 
                 placeholder="Add Todo..." 
                 onChange={(e)=>setInputText(e.target.value)}
             />

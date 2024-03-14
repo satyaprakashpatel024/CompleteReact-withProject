@@ -8,7 +8,6 @@ module.exports = {
 	plugins: ["react-refresh"],
 	rules: {
 		"react/react-in-jsx-scope": "off",
-		"react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
 		"react/jsx-no-target-blank": "off",
 		"react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
 		"react/prop-types": "off",
