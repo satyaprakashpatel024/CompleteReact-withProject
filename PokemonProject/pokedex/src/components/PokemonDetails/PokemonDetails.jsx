@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React from "react";
@@ -5,9 +6,9 @@ import { useParams } from "react-router-dom";
 import "./PokemonDetails.css";
 import usePokemonDetails from "../../hooks/usePokemonDetails";
 
-const PokemonDetails = () => {
+const PokemonDetails = ({ pokemonName }) => {
 	const { id } = useParams();
-	const [pokemon] = usePokemonDetails(id);
+	const [pokemon] = usePokemonDetails(id, pokemonName);
 
 	return (
 		<div className="pokemon-details-wrapper">
