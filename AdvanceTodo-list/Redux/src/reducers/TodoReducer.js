@@ -1,7 +1,10 @@
-function todoReducers(state, action) {
+let list1 = [{todoData:"task1",finished:true}]
+
+function todoReducers(state = list1, action) {
 	if (action.type == "add_todo") {
 		let todoText = action.payload.todoText;
-		return [...state, { id: state.length + 1, todoData: todoText, finished: false }];
+		// console.log(state);
+		return [...state, { id: Math.floor((Math.random()*100)/10), todoData: todoText, finished: false }];
 	} else if (action.type == "edit_todo") {
 		let todo = action.payload.todo;
 		let todoText = action.payload.todoText;
@@ -18,7 +21,7 @@ function todoReducers(state, action) {
 			return t.id !== todo.id;
 		});
 		return updatedList;
-	} else if (action.type == "finished_todo") {
+	} else if (action.type == "finish_todo") {
 		let todo = action.payload.todo;
 		let isFinished = action.payload.isFinished;
 		const updatedList = state.map((t) => {
