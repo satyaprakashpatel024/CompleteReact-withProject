@@ -7,7 +7,7 @@ const AddTodo = ({addTodo}) => {
 			<input type="text" value={inputText} placeholder="Add Todo..." onChange={(e) => setInputText(e.target.value)} />
 			<button
 				onClick={() => {
-					addTodo(inputText);
+					addTodo({todoText:inputText});
 					setInputText("");
 				}}>
 				Add
