@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import TodoDispatchContext from "../../context/TodoDispatchContext";
+import TodoDispatchContext from "../context/TodoDispatchContext";
 
 const AddTodo = () => {
 	const [inputText, setInputText] = useState("");

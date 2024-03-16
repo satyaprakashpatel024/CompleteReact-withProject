@@ -1,7 +1,7 @@
 import Todo from "../Todo/Todo.jsx";
-import TodoContext from "../../context/TodoContext.js";
+import TodoContext from "../context/TodoContext.js";
 import { useContext } from "react";
-import TodoDispatchContext from "../../context/TodoDispatchContext.js";
+import TodoDispatchContext from "../context/TodoDispatchContext.js";
 
 const TodoList = () => {
 	const { list } = useContext(TodoContext);
